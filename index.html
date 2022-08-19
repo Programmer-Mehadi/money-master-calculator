@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/f57ad58d47.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="font-mono">
+    <header>
+      <h1 class="text-5xl font-bold text-center text-blue-800 py-8">
+        Money Master<i class="fa-solid fa-sack-dollar ml-2"></i>
+      </h1>
+    </header>
+    <main class="mb-12">
+      <div class="grid grid-cols-2 gap-8 w-10/12 mx-auto">
+        <!-- left side  -->
+        <div>
+          <img class="h-full" src="images/money-cover-pic.jpg" alt="" />
+        </div>
+        <!-- right side -->
+        <div>
+          <div class="grid grid-cols-1 gap-8 mx-auto bg-gray-100 py-6">
+            <!-- div-1 -->
+            <div class="div-1 text-center text-2xl font-bold">Income</div>
+            <!-- div-2 -->
+            <div
+              class="div-2 w-8/12 mx-auto grid grid-cols-6 gap-4 justify-end items-center text-xl text-semibold"
+            >
+              <div class="col-span-2 text-end">Income:</div>
+              <div class="col-span-4">
+                <input
+                  id="total-income"
+                  class="w-full border-2 border-gray-300 bg-gray-300 py-1 px-2 rounded"
+                  type="text"
+                />
+              </div>
+            </div>
+            <!-- div-3 -->
+            <div class="div-3">
+              <div class="text-center text-2xl font-bold mt-2">Expenses</div>
+            </div>
+            <!-- div-4 -->
+            <div
+              class="div-4 w-8/12 mx-auto grid grid-cols-6 gap-4 justify-end items-center text-xl text-semibold"
+            >
+              <div class="col-span-2 text-end">Food:</div>
+              <div class="col-span-4">
+                <input
+                  id="food-cost"
+                  class="w-full border-2 border-gray-300 bg-gray-300 py-1 px-2 rounded"
+                  type="text"
+                />
+              </div>
+            </div>
+            <!-- div-5 -->
+            <div
+              class="div-5 w-8/12 mx-auto grid grid-cols-6 gap-4 justify-end items-center text-xl text-semibold"
+            >
+              <div class="col-span-2 text-end">Rent:</div>
+              <div class="col-span-4">
+                <input
+                  id="rent-cost"
+                  class="w-full border-2 border-gray-300 bg-gray-300 py-1 px-2 rounded"
+                  type="text"
+                />
+              </div>
+            </div>
+            <!-- div-6 -->
+            <div
+              class="div-6 w-8/12 mx-auto grid grid-cols-6 gap-4 justify-end items-center text-xl text-semibold"
+            >
+              <div class="col-span-2 text-end">Clothes:</div>
+              <div class="col-span-4">
+                <input
+                  id="clothes-cost"
+                  class="w-full border-2 border-gray-300 bg-gray-300 py-1 px-2 rounded"
+                  type="text"
+                />
+              </div>
+            </div>
+            <!-- div-7 -->
+            <div class="div-7 grid justify-center">
+              <button
+                id="calculate-btn"
+                class="bg-sky-400 text-white text-xl font-bold px-10 py-2 rounded w-fit"
+              >
+                Calculate
+              </button>
+            </div>
+            <!-- div-8 -->
+            <div class="div-8 text-center">
+              <h1
+                id="error-field"
+                class="w-10/12 mx-auto text-xl font-semibold rounded py-1 my-2 text-rose-800 bg-rose-200"
+              >
+                Your income is less than your expense!!!
+              </h1>
+              <h1 class="text-xl font-semibold">
+                Total Expenses: <span id="total-expense"></span>
+              </h1>
+            </div>
+            <!-- div-9 -->
+            <div class="div-9 text-center">
+              <h1 class="text-xl font-semibold">
+                Balance: <span id="balance"></span>
+              </h1>
+            </div>
+            <!-- div-10 -->
+            <div class="div-10">
+              <div
+                class="w-10/12 mx-auto grid grid-cols-10 gap-1 items-center justify-end"
+              >
+                <div class="col-span-2 text-xl text-center">Save:</div>
+                <div class="col-span-3">
+                  <input
+                    id="save-percent"
+                    class="w-full border-2 border-gray-300 bg-gray-300 text-xl py-1 px-2 rounded text-center"
+                    type="text"
+                  />
+                </div>
+                <div class="text-center">%</div>
+                <div class="col-span-4">
+                  <button
+                    id="save-btn"
+                    class="bg-sky-400 text-white text-xl font-bold px-14 py-1 rounded w-fit"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- div-11 -->
+            <div class="div-11 text-center">
+              <h1 class="text-xl font-semibold">
+                Saving Amount: <span id="saving-amount"></span>
+              </h1>
+            </div>
+            <!-- div-12 -->
+            <div class="div-12 text-center">
+              <h1 class="text-xl font-semibold">
+                Remaining Balance: <span id="remaining-balance"></span>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
